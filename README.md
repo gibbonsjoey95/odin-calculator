@@ -40,6 +40,5 @@ Consider adding additional features or improvements in the future, such as:
 *Note: Add a live demo link once the project is deployed.*
 
 ## Acknowledgments
-This project is created as part of ongoing learning and practice. Feel free to customize this template based on your project's specifics.
-
-Looking forward to working on the specifics of your calculator project tomorrow!
+This project is created as part of ongoing learning and practice. 
+https://www.theodinproject.com/lessons/foundations-calculator[here]{https://www.theodinproject.com/lessons/foundations-calculator}
