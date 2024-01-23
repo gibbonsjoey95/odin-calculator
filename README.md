@@ -41,4 +41,4 @@ Consider adding additional features or improvements in the future, such as:
 
 ## Acknowledgments
 This project is created as part of ongoing learning and practice. 
-https://www.theodinproject.com/lessons/foundations-calculator[here]{https://www.theodinproject.com/lessons/foundations-calculator}
+https://www.theodinproject.com/lessons/foundations-calculator[here](https://www.theodinproject.com/lessons/foundations-calculator)
