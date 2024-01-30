@@ -1,3 +1,5 @@
+const button = document.querySelectorAll('button')
+
 let firstNumber = 3
 let secondNumber = 5
 let operator = "*"

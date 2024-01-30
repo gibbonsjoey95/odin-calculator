@@ -9,15 +9,16 @@ body {
 .container {
     width: 200px;
     height: 310px;
-    border: solid 1px red;
+    background: #1d3849;
+    border-radius: 5%;
 }
 
 .display {
-    width: 80%;
+    width: 90%;
     height: 30px;
     margin: 20px auto;
     font-size: 2rem;
-    border: solid 1px blue;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -25,8 +26,23 @@ body {
 }
 
 .button-container {
-    border: solid 1px green;
-    width: 80%;
+    width: 90%;
     height: 70%;
     margin: 20px auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    margin: 0 0 5px 0;    
+    background: #a2bbcf;
+}
+
+.equal {
+    flex: 1;
 }
