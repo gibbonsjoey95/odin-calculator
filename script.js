@@ -1,8 +1,27 @@
-const button = document.querySelectorAll('button')
+const btns = document.querySelectorAll('button[id^=btn]')
+const display = document.querySelector('.display')
 
-let firstNumber = 3
-let secondNumber = 5
-let operator = "*"
+let firstNumber = ''
+let secondNumber = ''
+let operator = ''
+
+btns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    firstNumber += btn.value
+    display.textContent = firstNumber
+  })
+})
+
+if(operator === ''){
+ btns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    firstNumber += btn.value
+    display.textContent = firstNumber
+  })
+ })  
+}
+
+console.log(firstNumber)
 
 const add = (num1, num2) => {
   return num1 + num2;
@@ -38,6 +57,4 @@ const operate = (op, num1, num2) => {
 
 }
 
-console.log(add(firstNumber, secondNumber))
-let result = operate(operator, firstNumber, secondNumber)
-console.log(result)
+
