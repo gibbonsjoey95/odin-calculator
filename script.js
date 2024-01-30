@@ -1,3 +1,7 @@
+let firstNumber = 3
+let secondNumber = 5
+let operator = "*"
+
 const add = (num1, num2) => {
   return num1 + num2;
 };
@@ -14,7 +18,24 @@ const divide = (num1, num2) => {
   return num1 / num2;
 };
 
-console.log(add(1, 3));
-console.log(subtract(3, 1));
-console.log(multiply(2, 3));
-console.log(divide(9,3));
+const operate = (op, num1, num2) => {
+  switch(op){
+    case "+":
+      return add(num1,num2)
+      break;
+    case "-":
+      return subtract(num1, num2)
+      break;
+    case "*":
+      return multiply(num1, num2)
+      break;
+    case "/": 
+      return divide(num1, num2)
+      break;
+  }
+
+}
+
+console.log(add(firstNumber, secondNumber))
+let result = operate(operator, firstNumber, secondNumber)
+console.log(result)
