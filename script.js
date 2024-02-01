@@ -16,10 +16,18 @@ btns.forEach((btn) => {
         return firstNumber
       }
 
+    if(btn.value === '.' && firstNumber.split('').includes('.')){
+      return firstNumber
+    }
+
       firstNumber += btn.value
       display.textContent = firstNumber
     } else {
       if(secondNumber.length === 9){
+        return secondNumber
+      }
+
+      if(btn.value === '.' && secondNumber.split('').includes('.')){
         return secondNumber
       }
 
