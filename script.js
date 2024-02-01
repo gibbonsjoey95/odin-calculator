@@ -40,12 +40,20 @@ equalBtn.addEventListener('click', () => {
 
   if(secondNumber === '0'){
     alert('You can not divide a number by 0.')
+    display.textContent = firstNumber
+    return firstNumber 
   }
   
-  let number1 = parseInt(firstNumber)
-  let number2 = parseInt(secondNumber)
+  let number1 = parseFloat(firstNumber)
+  let number2 = parseFloat(secondNumber)
 
-  firstNumber = Math.round(operate(operator, number1, number2) * 100)/100
+  console.log(firstNumber)
+  console.log(number1)
+  console.log(number2)
+
+  firstNumber = Math.round(operate(operator, number1, number2) * 1000000000)/1000000000
+  // firstNumber = operate(operator, number1, number2)
+  console.log(parseFloat(firstNumber))
   secondNumber = ''
   display.textContent = firstNumber
 })
