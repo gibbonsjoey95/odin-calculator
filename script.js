@@ -12,9 +12,17 @@ let operator = ''
 btns.forEach((btn) => {
   btn.addEventListener('click', () => {
     if(operator === ''){
+      if(firstNumber.length === 9){
+        return firstNumber
+      }
+
       firstNumber += btn.value
       display.textContent = firstNumber
     } else {
+      if(secondNumber.length === 9){
+        return secondNumber
+      }
+
       secondNumber += btn.value
       display.textContent = secondNumber
   }
@@ -52,10 +60,16 @@ equalBtn.addEventListener('click', () => {
   console.log(number2)
 
   firstNumber = Math.round(operate(operator, number1, number2) * 1000000000)/1000000000
-  // firstNumber = operate(operator, number1, number2)
-  console.log(parseFloat(firstNumber))
-  secondNumber = ''
-  display.textContent = firstNumber
+  if(firstNumber.toString().length > 11){
+    secondNumber = ''
+    display.textContent = firstNumber.toExponential(5)
+    console.log('yes')
+  } else {
+    secondNumber = ''
+    display.textContent = firstNumber
+  }
+  
+  console.log(firstNumber)
 })
 
 clearBtn.addEventListener('click', () => {
