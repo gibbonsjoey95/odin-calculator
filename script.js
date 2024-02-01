@@ -3,6 +3,7 @@ const ops = document.querySelectorAll('button[id^=op]')
 const display = document.querySelector('.display')
 const equalBtn = document.querySelector('#equalBtn')
 const clearBtn = document.querySelector('#clearBtn')
+const backBtn = document.querySelector('#backBtn')
 
 
 let firstNumber = ''
@@ -63,21 +64,16 @@ equalBtn.addEventListener('click', () => {
   let number1 = parseFloat(firstNumber)
   let number2 = parseFloat(secondNumber)
 
-  console.log(firstNumber)
-  console.log(number1)
-  console.log(number2)
-
   firstNumber = Math.round(operate(operator, number1, number2) * 1000000000)/1000000000
   if(firstNumber.toString().length > 11){
     secondNumber = ''
+    operator = ''
     display.textContent = firstNumber.toExponential(5)
-    console.log('yes')
   } else {
     secondNumber = ''
+    operator = ''
     display.textContent = firstNumber
   }
-  
-  console.log(firstNumber)
 })
 
 clearBtn.addEventListener('click', () => {
@@ -85,6 +81,19 @@ clearBtn.addEventListener('click', () => {
   secondNumber = ''
   operator = ''
   display.textContent = ''
+})
+
+backBtn.addEventListener('click', () => {
+  firstNumber = firstNumber.toString()
+
+   if(operator === ''){
+    console.log(firstNumber)
+    firstNumber = firstNumber.substring(0, firstNumber.length - 1)
+    display.textContent = firstNumber
+  } else {
+    secondNumber = secondNumber.substring(0, secondNumber.length - 1)
+    display.textContent = secondNumber
+  }
 })
 
 const add = (num1, num2) => {

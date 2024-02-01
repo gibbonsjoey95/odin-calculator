@@ -43,6 +43,11 @@ button {
     background: #a2bbcf;
 }
 
-.equal {
-    flex: 1;
+.last-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.equal, .back {
+    width: 85px;
 }
